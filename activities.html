@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <style>
+        /* General Styles */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f3f4f6; 
+        }
+        h1 { 
+            color: #4CAF50; 
+            text-align: center; 
+            margin-top: 20px; 
+        }
+        p { 
+            color: #555; 
+            text-align: center; 
+        }
+
+        /* Topbar Styles */
+        .topbar {
+            background-color: #e6e6e6;
+            padding: 10px 0;
+        }
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+        .topbar ul li i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        .logo img {
+            height: 50px; /* Adjust logo height */
+        }
+
+        /* Activity List Styles */
+        .activity-list { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+        .activity-card { 
+            background: #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            padding: 20px; 
+            width: 250px; 
+            text-align: left; 
+        }
+        .activity-card h2 { 
+            font-size: 1.2em; 
+            color: #333; 
+            margin-bottom: 10px; 
+        }
+        .activity-card p { 
+            font-size: 0.9em; 
+            color: #666; 
+            line-height: 1.5; 
+        }
+
+        /* Back to Home Button */
+        .back-link-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .back-link {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <!-- Contact Information -->
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email:</span>
+                        <a href="mailto:elderwatch@gmail.com">elderwatch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Contact no:</span> 03-877777134
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities Section -->
+    <h1>Monthly Activities</h1>
+    <p>Track and manage activities for seniors.</p>
+    
+    <div class="activity-list">
+        <!-- Activity Cards -->
+        <div class="activity-card">
+            <h2>Chair Yoga</h2>
+            <p>A gentle form of yoga to improve flexibility and relaxation.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Gardening Workshop</h2>
+            <p>Learn to plant flowers and vegetables to connect with nature.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Movie Night</h2>
+            <p>Enjoy classic films with popcorn in a group setting.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Book Club</h2>
+            <p>Read and discuss books or short stories in a friendly group.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Holiday Crafting</h2>
+            <p>Create festive decorations for the holiday season.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Healthy Cooking</h2>
+            <p>Learn to prepare heart-healthy meals with simple recipes.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Storytelling Session</h2>
+            <p>Share life stories or listen to a guest storyteller.</p>
+        </div>
+        <div class="activity-card">
+            <h2>Music Sessions</h2>
+            <p>Participate in sing-alongs or enjoy live performances.</p>
+        </div>
+    </div>
+    
+    <div class="back-link-container">
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

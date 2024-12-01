@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Topbar Styles */
+        .topbar {
+            background-color: #e6e6e6;
+            padding: 10px 0;
+        }
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+        .topbar ul li i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        .successBox {
+            display: none;
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .successBox.active {
+            display: block;
+        }
+        .successBox .close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            float: right;
+            cursor: pointer;
+        }
+
+        /* Back to Home Button */
+        .back-link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <!-- Contact Information -->
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email:</span>
+                        <a href="mailto:elderwatch@gmail.com">elderwatch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Contact no:</span> 03-877777134
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+    </div>
+
+    <h1>Seniors</h1>
+    <p>Manage senior profiles and their relationships with family contacts, medical records, and activities.</p>
+    
+    <!-- Form -->
+    <form id="seniorsForm" method="post" style="padding: 40px;">
+        <label for="seniorID">Senior ID:</label>
+        <input type="text" id="seniorID" name="seniorID" placeholder="Enter Senior ID" required>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter Address" required>
+        
+        <label for="contactNo">Contact Number:</label>
+        <input type="text" id="contactNo" name="contactNo" placeholder="Enter Contact Number" required>
+        
+        <label for="emergencyContact">Emergency Contact:</label>
+        <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Enter Emergency Contact" required>
+        
+        <div class="successBox" id="successBox">
+            <button type="button" class="close" onclick="document.getElementById('successBox').classList.remove('active');">&times;</button>
+            <strong style="font-size: 16px;">Success!</strong> Senior information has been saved successfully.
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Back to Home Button -->
+    <div class="back-link-container">
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+    <script>
+        // Simulate form submission for demonstration
+        const form = document.getElementById('seniorsForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successBox').classList.add('active');
+        });
+    </script>
+</body>
+</html>

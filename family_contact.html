@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Contacts</title>
+    <style>
+        /* Topbar Styles */
+        .topbar {
+            background-color: #e6e6e6;
+            padding: 10px 0;
+        }
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+        .topbar ul li i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Logo Styles */
+        .logo img {
+            height: 50px;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            color: #555;
+        }
+        .contacts-table {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contacts-table th, .contacts-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .contacts-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .contacts-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Back to Home Button */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <!-- Contact Information -->
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email:</span>
+                        <a href="mailto:elderwatch@gmail.com">elderwatch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Contact no:</span> 03-877777134
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+    </div>
+    <!-- End Topbar -->
+
+    <h1>Family Contacts</h1>
+    <p>Below is the family contact information for seniors, including their relationships and emergency contact details:</p>
+
+    <table class="contacts-table">
+        <thead>
+            <tr>
+                <th>Contact ID</th>
+                <th>Senior ID</th>
+                <th>Name</th>
+                <th>Relationship</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C001</td>
+                <td>S001</td>
+                <td>Arman</td>
+                <td>Son</td>
+                <td>012-4567777</td>
+                <td>arman@gmail.com</td>
+            </tr>
+            <tr>
+                <td>C002</td>
+                <td>S002</td>
+                <td>Saleha</td>
+                <td>Daughter</td>
+                <td>019-9876543</td>
+                <td>saleha@gmail.com</td>
+            </tr>
+            <tr>
+                <td>C003</td>
+                <td>S003</td>
+                <td>Mikail</td>
+                <td>Son</td>
+                <td>011-0987654</td>
+                <td>mikail@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+</body>
+</html>

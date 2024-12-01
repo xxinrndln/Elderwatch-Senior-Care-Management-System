@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+    <style>
+        /* Topbar Styles */
+        .topbar {
+            background-color: #e6e6e6;
+            padding: 10px 0;
+        }
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+        .topbar ul li i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Logo Styles */
+        .logo img {
+            height: 50px;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            color: #555;
+        }
+
+        /* Table Styling */
+        .staff-table {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .staff-table th, .staff-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .staff-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .staff-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .staff-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Back to Home Button */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <!-- Contact Information -->
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email:</span>
+                        <a href="mailto:elderwatch@gmail.com">elderwatch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Contact no:</span> 03-877777134
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+    </div>
+    <!-- End Topbar -->
+
+    <h1>Staff</h1>
+    <p>Below is the information for nurses and support staff, including their roles and contact details:</p>
+
+    <table class="staff-table">
+        <thead>
+            <tr>
+                <th>Staff ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Contact Number</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Data Rows -->
+            <tr>
+                <td>ED001</td>
+                <td>Ahmad Lee</td>
+                <td>Care Assistant</td>
+                <td>013-3456789</td>
+                <td>ahmad@gmail.com</td>
+                <td>123 Shah Alam, Selangor</td>
+            </tr>
+            <tr>
+                <td>ED002</td>
+                <td>Jamilah Abu</td>
+                <td>Housekeeper</td>
+                <td>019-6543210</td>
+                <td>jamilah@gmail.com</td>
+                <td>456 Shah Alam, Selangor</td>
+            </tr>
+            <tr>
+                <td>ED003</td>
+                <td>Siti Rahman</td>
+                <td>Registered Nurse</td>
+                <td>017-5567890</td>
+                <td>siti.rahman@gmail.com</td>
+                <td>789 Klang, Selangor</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+</body>
+</html>
