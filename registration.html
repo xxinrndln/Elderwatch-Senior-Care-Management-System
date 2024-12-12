@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(https://raw.githubusercontent.com/xxinrndln/Elderwatch-Senior-Care-Management-System/refs/heads/main/Images/background.jpg) no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .registration-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .form-container {
+            width: 50%;
+            background: #e6f7e6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-container input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .footer i {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        .footer i:hover {
+            color: #333;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Register</h1>
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+
+        <div class="registration-section">
+            <div class="form-container">
+                <h2>Register a new account</h2>
+                <form id="registrationForm">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <div class="error" id="usernameError"></div>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error" id="emailError"></div>
+
+                    <label for="password">Password* (must be at least 6 characters long)</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <div class="error" id="passwordError"></div>
+
+                    <label for="confirmPassword">Confirm Password*</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                    <div class="error" id="confirmPasswordError"></div>
+
+                    <button type="submit">Register</button>
+                </form>
+                <div class="success" id="successMessage"></div>
+            </div>
+            
+            <div class="help-container">
+            <p><strong>Need Help?</strong></p>
+            <p>Contact Helpdesk at</p>
+            <p><strong>03-89999934</strong></p>
+            <p>(9 a.m. - 6 p.m. weekdays)</p>
+        </div>
+        </div>
+
+        <div class="footer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+            // Error message elements
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+            const successMessage = document.getElementById('successMessage');
+
+            // Reset error messages
+            usernameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+            successMessage.textContent = '';
+
+            // Validation flags
+            let isValid = true;
+
+            // Username validation
+            if (username === '') {
+                usernameError.textContent = 'Username is required.';
+                isValid = false;
+            } else if (username.length < 3) {
+                usernameError.textContent = 'Username must be at least 3 characters long.';
+                isValid = false;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === '') {
+                emailError.textContent = 'Email is required.';
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Password validation
+            if (password === '') {
+                passwordError.textContent = 'Password is required.';
+                isValid = false;
+            } else if (password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // Confirm password validation
+            if (confirmPassword === '') {
+                confirmPasswordError.textContent = 'Please confirm your password.';
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            // If valid, display success message
+            if (isValid) {
+                successMessage.textContent = 'Registration successful!';
+                // Clear form
+                document.getElementById('registrationForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>
