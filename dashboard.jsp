@@ -205,6 +205,12 @@
                     <h3>Staff</h3>
                     <p>Information for nurses and support staff, including their roles and contact details</p>
                 </a>
+                </a>
+                <a href="medication.html" class="grid-item">
+                    <img src="https://github.com/xxinrndln/Elderwatch-Senior-Care-Management-System/blob/main/Images/medicine-removebg-preview.png" alt="Medications">
+                    <h3>Medications</h3>
+                    <p>Track and manage medications for seniors.</p>
+                </a>
             </div>
         </div>
 
