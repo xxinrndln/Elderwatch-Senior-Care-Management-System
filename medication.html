@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medications</title>
+    <style>
+        /* Topbar Styles */
+        .topbar {
+            background-color: #e6e6e6;
+            padding: 10px 0;
+        }
+        .topbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .topbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .topbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+        .topbar ul li i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Logo Styles */
+        .logo img {
+            height: 50px;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            color: #555;
+        }
+        .medications-table {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .medications-table th, .medications-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .medications-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .medications-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Back to Home Button */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <!-- Contact Information -->
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email:</span>
+                        <a href="mailto:elderwatch@gmail.com">elderwatch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Contact no:</span> 03-877777134
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Elderwatch Logo">
+            </div>
+        </div>
+    </div>
+    <!-- End Topbar -->
+
+    <h1>Medications</h1>
+    <p>Below is the list of medications for seniors, including their dosages, frequencies, and start/end dates:</p>
+
+    <table class="medications-table">
+        <thead>
+            <tr>
+                <th>Medication ID</th>
+                <th>Name</th>
+                <th>Dosage</th>
+                <th>Frequency</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Senior ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>M001</td>
+                <td>Panadol</td>
+                <td>500mg</td>
+                <td>Every 6 hours</td>
+                <td>2024-01-10</td>
+                <td>2024-02-10</td>
+                <td>S001</td>
+            </tr>
+            <tr>
+                <td>M001</td>
+                <td>Paracetamol</td>
+                <td>500mg</td>
+                <td>Twice a day</td>
+                <td>2024-11-10</td>
+                <td>2024-12-10</td>
+                <td>S001</td>
+            </tr>
+            <tr>
+                <td>M002</td>
+                <td>Ibuprofen</td>
+                <td>200mg</td>
+                <td>Once a day</td>
+                <td>2024-11-12</td>
+                <td>2024-12-12</td>
+                <td>S002</td>
+            </tr>
+            <tr>
+                <td>M003</td>
+                <td>Insulin</td>
+                <td>10 Units</td>
+                <td>Before meals</td>
+                <td>2024-11-15</td>
+                <td>2024-12-15</td>
+                <td>S003</td>
+            </tr>
+            <tr>
+                <td>M004</td>
+                <td>Amoxicillin</td>
+                <td>500mg</td>
+                <td>Every 8 hours</td>
+                <td>2024-01-20</td>
+                <td>2024-02-20</td>
+                <td>S004</td>
+            </tr>
+            <tr>
+                <td>M006</td>
+                <td>Lisinopril</td>
+                <td>10mg</td>
+                <td>Once daily</td>
+                <td>2024-01-25</td>
+                <td>2024-02-25</td>
+                <td>S006</td>
+            </tr>
+            <tr>
+                <td>M007</td>
+                <td>Metformin</td>
+                <td>500mg</td>
+                <td>Twice daily</td>
+                <td>2024-01-28</td>
+                <td>2024-02-28</td>
+                <td>S007</td>
+            </tr>
+            <tr>
+                <td>M008</td>
+                <td>Amlodipine</td>
+                <td>5mg</td>
+                <td>Once daily</td>
+                <td>2024-02-02</td>
+                <td>2024-03-02</td>
+                <td>S001</td>
+            </tr>
+            <tr>
+                <td>M009</td>
+                <td>Prednisone</td>
+                <td>10mg</td>
+                <td>Once daily</td>
+                <td>2024-01-10</td>
+                <td>2024-02-10</td>
+                <td>S002</td>
+            </tr>
+            <tr>
+                <td>M010</td>
+                <td>Losartan</td>
+                <td>50mg</td>
+                <td>Once daily</td>
+                <td>2024-02-05</td>
+                <td>2024-03-05</td>
+                <td>S003</td>
+            </tr>
+            <tr>
+                <td>M011</td>
+                <td>Salbutamol</td>
+                <td>100mcg</td>
+                <td>Every 4-6 hours</td>
+                <td>2024-02-10</td>
+                <td>2024-03-10</td>
+                <td>S004</td>
+            </tr>
+            <tr>
+                <td>M012</td>
+                <td>Furosemide</td>
+                <td>40mg</td>
+                <td>Once daily</td>
+                <td>2024-02-15</td>
+                <td>2024-03-15</td>
+                <td>S005</td>
+            </tr>
+            <tr>
+                <td>M013</td>
+                <td>Atorvastatin</td>
+                <td>20mg</td>
+                <td>Once daily</td>
+                <td>2024-02-18</td>
+                <td>2024-03-18</td>
+                <td>S006</td>
+            </tr>
+            <tr>
+                <td>M014</td>
+                <td>Ranitidine</td>
+                <td>150mg</td>
+                <td>Once daily</td>
+                <td>2024-02-20</td>
+                <td>2024-03-20</td>
+                <td>S007</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+</body>
+</html>
